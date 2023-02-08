@@ -10,7 +10,11 @@ public class UtilisateurDAO
     public string mail {get; set;}
     public string adresse {get; set;}
     public string telephonne {get; set;}
-    public virtual ICollection<PretDAO> Prets { get; set; }=new HashSet<FilmDAO>();
+
+    public virtual ICollection<ObjetDAO> Objets { get; set; }
+
+    public virtual ICollection<PretDAO> Prets { get; set; }
+// public virtual ICollection<ObjetDAO> Objets { get; set; }=new HashSet<FilmDAO>();
 
    
 }
