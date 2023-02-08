@@ -4,7 +4,7 @@ namespace DAL
 {
     public class PhotoDAO
     {
-        public Guid Id {get; set;}=Guid.NewGuid();
+        public Guid Id_Photo {get; set;}=Guid.NewGuid();
        
         public string Photo_Name;
 

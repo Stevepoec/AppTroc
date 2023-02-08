@@ -4,7 +4,7 @@ namespace DAL;
 
 public class UtilisateurDAO
 {
-    public Guid ID_personne { get; set; }=Guid.NewGuid();
+    public Guid Id_Personne { get; set; }=Guid.NewGuid();
     public string Nom {get; set;}
     public string Prenom {get; set;}
     public string mail {get; set;}

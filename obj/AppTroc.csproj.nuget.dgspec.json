@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\IB\\Desktop\\Projet\\Apptroc\\AppTroc\\AppTroc.csproj": {}
+    "C:\\Users\\IB\\Desktop\\Fil Rouge\\AppTroc\\AppTroc.csproj": {}
   },
   "projects": {
-    "C:\\Users\\IB\\Desktop\\Projet\\Apptroc\\AppTroc\\AppTroc.csproj": {
+    "C:\\Users\\IB\\Desktop\\Fil Rouge\\AppTroc\\AppTroc.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\IB\\Desktop\\Projet\\Apptroc\\AppTroc\\AppTroc.csproj",
+        "projectUniqueName": "C:\\Users\\IB\\Desktop\\Fil Rouge\\AppTroc\\AppTroc.csproj",
         "projectName": "AppTroc",
-        "projectPath": "C:\\Users\\IB\\Desktop\\Projet\\Apptroc\\AppTroc\\AppTroc.csproj",
+        "projectPath": "C:\\Users\\IB\\Desktop\\Fil Rouge\\AppTroc\\AppTroc.csproj",
         "packagesPath": "C:\\Users\\IB\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\IB\\Desktop\\Projet\\Apptroc\\AppTroc\\obj\\",
+        "outputPath": "C:\\Users\\IB\\Desktop\\Fil Rouge\\AppTroc\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\IB\\AppData\\Roaming\\NuGet\\NuGet.Config",
