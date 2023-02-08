@@ -33,6 +33,12 @@ builder.Entity<ObjetDAO>(entity =>{
 	.WithOne(c.objet)
 	.HasForeignKey(c => c.Id_Objet);
 
+	entity.HasOne(c=>c.Utilisateur)
+		.WithMany(c=>c.Objets)
+		.HasForeignKey(c=>c.Id_Utilisateur);
+
+
+
 
 	// Nom de IdCategorie dans la BDD
 	entity.Property(c => c.IdCategorie).HasColumnName("PK_Categorie");
