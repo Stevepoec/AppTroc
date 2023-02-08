@@ -1,3 +1,5 @@
+using System.ComponentModel.DataAnnotations;
+
 namespace DAL;
 
 public class UtilisateurDAO
