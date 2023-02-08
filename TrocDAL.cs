@@ -1,6 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
 namespace DAL
 {
+
+    // TODO : Rajouter le mot de passe
 public partial class TrocDAL : IdentityDbContext<UtilisateurDAO,RoleDAO, Guid>{ 
     public MaDal(){ this.Database.EnsureCreated();}
 protected override void OnConfiguring(DbContextOptionsBuilder builder){
