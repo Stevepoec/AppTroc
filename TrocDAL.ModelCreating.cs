@@ -1,100 +1,120 @@
 using Microsoft.EntityFrameworkCore;
 namespace DAL
 {
-public partial class TrocDal {
-
-protected override void OnModelCreating(ModelBuilder builder){
-base.OnModelCreating(builder);
+    public partial class TrocDAL
+    {
 
 
-//MODIF ObjetDAO
-builder.Entity<ObjetDAO>(entity =>{
+        protected override void OnModelCreating(ModelBuilder builder)
+        {
+            base.OnModelCreating(builder);
 
-	// Spécifications de la table
-	entity.ToTable("TBL_Objets")
-	.HasIndex(c => c.Nom_Objet);
+            builder.Entity<UtilisateurDAO>(entity =>
+            {
+                entity.HasOne(c => c.User);
 
-	// Spécifications de la colonne titre
-	entity.Property(c => c.Nom_Objet)
-	.HasColumnName("Nom de l'objet")
-	.HasMaxLength(150)
-	.IsRequired(true);
+            });
 
-	// Spécifications de la colonne id
-	entity.Property(c => c.Id)
-	.HasColumnName("PK_Objet");
+            //MODIF ObjetDAO
+            builder.Entity<ObjetDAO>(entity =>
+            {
 
-	// Relation 1-N avec Photo
-	entity.HasMany(c => c.Photos)
-	.WithOne(c => c.Objet)
-	.HasForeignKey(c => c.Id_Objet);
+                // Spécifications de la table
+                entity.ToTable("TBL_Objets")
+                .HasIndex(c => c.Nom_Objet);
 
-	entity.HasMany(c => c.Prets)
-	.WithOne(c.objet)
-	.HasForeignKey(c => c.Id_Objet);
+                // Spécifications de la colonne titre
+                entity.Property(c => c.Nom_Objet)
+                .HasColumnName("Nom de l'objet")
+                .HasMaxLength(150)
+                .IsRequired(true);
 
-	entity.HasOne(c=>c.Utilisateur)
-		.WithMany(c=>c.Objets)
-		.HasForeignKey(c=>c.Id_Utilisateur);
+                // Spécifications de la colonne id
+                entity.Property(c => c.Id_Objet)
+                .HasColumnName("PK_Objet");
 
+                // Relation 1-N avec Photo
+                entity.HasMany(c => c.Photos)
+                .WithOne(c => c.Objet)
+                .HasForeignKey(c => c.Id_Objet);
 
+                entity.HasMany(c => c.Prets)
+                .WithOne(c => c.Objet)
+                .HasForeignKey(c => c.Id_Objet);
 
-
-	// Nom de IdCategorie dans la BDD
-	entity.Property(c => c.IdCategorie).HasColumnName("PK_Categorie");
-	});
-
-//MODIF CATEGORIEDAO
-
-
-builder.Entity<CategorieDAO>(entity =>
-{
-	entity.ToTable("TBL_Caetegories")
-	.HasIndex(c => c.Nom);
-	
-	entity.Property(c => c.Nom)
-	.HasMaxLength(150);
-
-	entity.Property(c => c.Id)
-	.HasColumnName("PK_Categorie");
-	});
+                entity.HasOne(c => c.Proprietaire)
+                    .WithMany(c => c.Objets)
+                    .HasForeignKey(c => c.Id_Proprietaire);
 
 
-// INITIALISER LA BDD
-// SEED
+                //MODIF CATEGORIEDAO
+            });
 
-	var c1 = new CategorieDAO() { Nom = "Thriller" };
-	var c2 = new CategorieDAO() { Nom = "Comédie" };
-	var c3 = new CategorieDAO() { Nom = "Action" };
+            builder.Entity<PretDAO>(entity =>
+            {
+                entity.ToTable("TBL_Pret");
+
+                entity.Property(c => c.Id_Pret)
+                .HasColumnName("PK_Pret");
+            });
 
 
 
-var f1 = new FilmDAO()
-	{
-	Title = "Les aventures fantastique du C# à Bordeaux",
-	Color = true,
-	Duration = 120,
-	ReleaseDate = new DateTime(2022, 12, 4),
-	IdCategorie = c1.Id
-	};
-var f2 = new FilmDAO()
-	{
-	Title = "Drive",
-	Color = true,
-	Duration = 120,
-	ReleaseDate = new DateTime(2022, 11, 4),
-	IdCategorie = c1.Id
-	};
-var f3 = new FilmDAO()
-	{
-	Title = "Lawrence d'Arabie",
-	Color = true,
-	Duration = 180,
-	ReleaseDate = new DateTime(2022, 11, 4),
-	IdCategorie = c2.Id
-	};
 
-builder.Entity<FilmDAO>().HasData(new List<FilmDAO>() { f1,f2,f3 });
-}
-}
+            // MODIF UTILISATEURDAO
+
+            builder.Entity<UtilisateurDAO>(entity =>
+            {
+                entity.ToTable("TBL_Utilisateur");
+
+                entity.Property(c => c.Id_Utilisateur)
+                .HasColumnName("PK_Pret");
+
+
+                entity.HasMany(c => c.Prets)
+                .WithOne(c => c.Emprunteur)
+                .HasForeignKey(c => c.Id_Emprunteur);
+
+            });
+
+
+
+
+            // INITIALISER LA BDD
+            // SEED
+
+            var c1 = new CategorieDAO() { Nom = "Thriller" };
+            var c2 = new CategorieDAO() { Nom = "Comédie" };
+            var c3 = new CategorieDAO() { Nom = "Action" };
+
+
+
+            var f1 = new FilmDAO()
+            {
+                Title = "Les aventures fantastique du C# à Bordeaux",
+                Color = true,
+                Duration = 120,
+                ReleaseDate = new DateTime(2022, 12, 4),
+                IdCategorie = c1.Id
+            };
+            var f2 = new FilmDAO()
+            {
+                Title = "Drive",
+                Color = true,
+                Duration = 120,
+                ReleaseDate = new DateTime(2022, 11, 4),
+                IdCategorie = c1.Id
+            };
+            var f3 = new FilmDAO()
+            {
+                Title = "Lawrence d'Arabie",
+                Color = true,
+                Duration = 180,
+                ReleaseDate = new DateTime(2022, 11, 4),
+                IdCategorie = c2.Id
+            };
+
+            builder.Entity<FilmDAO>().HasData(new List<FilmDAO>() { f1, f2, f3 });
+        }
+    }
 }

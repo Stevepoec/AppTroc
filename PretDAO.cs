@@ -27,9 +27,8 @@ namespace DAL
         public String? Commentaire_Preteur { get; set; }
 
         public Guid Id_Objet {get;set;}
-        public Guid Id_Preteur {get;set;}
         public Guid Id_Emprunteur {get;set;}
-        public UtilisateurDAO Utilisateur { get; set; }
+        public virtual UtilisateurDAO Emprunteur { get; set; }
         public ObjetDAO Objet { get; set; }
 
     }

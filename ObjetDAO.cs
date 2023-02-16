@@ -10,9 +10,9 @@ public class ObjetDAO
     public string Descrition_Longue {get; set;}
     public decimal Valeur { get; set; }
 
-    public Guid Id_Utilisateur {get;set;}
+    public Guid Id_Proprietaire {get;set;}
 
-    public UtilisateurDAO Utilisateur {get; set;}
+    public UtilisateurDAO Proprietaire {get; set;}
     public virtual ICollection<PhotoDAO> Photos {get;set;}
     public virtual ICollection<PretDAO> Prets {get;set;}
 
