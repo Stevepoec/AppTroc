@@ -83,38 +83,38 @@ namespace DAL
             // INITIALISER LA BDD
             // SEED
 
-            var c1 = new CategorieDAO() { Nom = "Thriller" };
-            var c2 = new CategorieDAO() { Nom = "Comédie" };
-            var c3 = new CategorieDAO() { Nom = "Action" };
+            // var c1 = new CategorieDAO() { Nom = "Thriller" };
+            // var c2 = new CategorieDAO() { Nom = "Comédie" };
+            // var c3 = new CategorieDAO() { Nom = "Action" };
 
 
 
-            var f1 = new FilmDAO()
-            {
-                Title = "Les aventures fantastique du C# à Bordeaux",
-                Color = true,
-                Duration = 120,
-                ReleaseDate = new DateTime(2022, 12, 4),
-                IdCategorie = c1.Id
-            };
-            var f2 = new FilmDAO()
-            {
-                Title = "Drive",
-                Color = true,
-                Duration = 120,
-                ReleaseDate = new DateTime(2022, 11, 4),
-                IdCategorie = c1.Id
-            };
-            var f3 = new FilmDAO()
-            {
-                Title = "Lawrence d'Arabie",
-                Color = true,
-                Duration = 180,
-                ReleaseDate = new DateTime(2022, 11, 4),
-                IdCategorie = c2.Id
-            };
+            // var f1 = new FilmDAO()
+            // {
+            //     Title = "Les aventures fantastique du C# à Bordeaux",
+            //     Color = true,
+            //     Duration = 120,
+            //     ReleaseDate = new DateTime(2022, 12, 4),
+            //     IdCategorie = c1.Id
+            // };
+            // var f2 = new FilmDAO()
+            // {
+            //     Title = "Drive",
+            //     Color = true,
+            //     Duration = 120,
+            //     ReleaseDate = new DateTime(2022, 11, 4),
+            //     IdCategorie = c1.Id
+            // };
+            // var f3 = new FilmDAO()
+            // {
+            //     Title = "Lawrence d'Arabie",
+            //     Color = true,
+            //     Duration = 180,
+            //     ReleaseDate = new DateTime(2022, 11, 4),
+            //     IdCategorie = c2.Id
+            // };
 
-            builder.Entity<FilmDAO>().HasData(new List<FilmDAO>() { f1, f2, f3 });
+            // builder.Entity<FilmDAO>().HasData(new List<FilmDAO>() { f1, f2, f3 });
         }
     }
 }
