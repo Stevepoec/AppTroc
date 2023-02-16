@@ -1,0 +1,13 @@
+@model ObjetModel
+<h3>Nouvel Objet</h3>
+
+<form method="post">
+    <partial name="_ObjetEditControls" model="@Model"></partial>
+    <div>
+        <button  class="btn btn-warning">Créer</button>
+    </div>
+</form>
+
+@section Scripts{
+       <partial name="_ValidationScriptsPartial"></partial>
+}

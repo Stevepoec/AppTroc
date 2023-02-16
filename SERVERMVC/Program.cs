@@ -1,3 +1,19 @@
+using AutoMapper;
+using DAL;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+
+var configMapper=new MapperConfiguration(options=>{
+    // créé un mapping propriété à propriété
+    // Id <=> Id
+    options.CreateMap<UtilisateurDAO,UtilisateurModel>().ReverseMap();
+    options.CreateMap<PretDAO,PretModel>().ReverseMap();
+    options.CreateMap<ObjetDAO,ObjetModel>().ReverseMap();
+    options.CreateMap<PhotoDAO,PhotoModel>().ReverseMap();
+});
+
+var mapper=configMapper.CreateMapper();
+
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -25,3 +41,6 @@ app.MapControllerRoute(
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
 app.Run();
+
+
+
