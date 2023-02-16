@@ -2,9 +2,9 @@ using System.ComponentModel.DataAnnotations;
 
 namespace DAL;
 
-public class UtilisateurDAO
+public class AppUserDAO
 {
-    public Guid Id_Utilisateur { get; set; }=Guid.NewGuid();
+    public Guid Id_Utilisateur { get; set; }
     public string Nom {get; set;}
     public string Prenom {get; set;}
     public string mail {get; set;}

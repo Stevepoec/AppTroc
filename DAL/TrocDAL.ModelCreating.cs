@@ -9,15 +9,15 @@ namespace DAL
         {
             base.OnModelCreating(builder);
 
-            builder.Entity<UtilisateurDAO>(entity =>
+            builder.Entity<AppUserDAO>(entity =>
             {
-                entity.HasOne(c => c.User);
 
             });
 
             //MODIF ObjetDAO
             builder.Entity<ObjetDAO>(entity =>
             {
+                entity.HasKey(c => c.Id_Objet);
 
                 // Spécifications de la table
                 entity.ToTable("TBL_Objets")
@@ -52,6 +52,8 @@ namespace DAL
 
             builder.Entity<PretDAO>(entity =>
             {
+                entity.HasKey(c => c.Id_Pret);
+
                 entity.ToTable("TBL_Pret");
 
                 entity.Property(c => c.Id_Pret)
@@ -63,13 +65,17 @@ namespace DAL
 
             // MODIF UTILISATEURDAO
 
-            builder.Entity<UtilisateurDAO>(entity =>
+            builder.Entity<AppUserDAO>(entity =>
             {
+                entity.HasKey(c => c.Id_Utilisateur);
                 entity.ToTable("TBL_Utilisateur");
 
                 entity.Property(c => c.Id_Utilisateur)
                 .HasColumnName("PK_Pret");
 
+                entity.HasOne(c => c.User)
+                .WithOne()
+                .HasForeignKey<AppUserDAO>(c => c.Id_Utilisateur);
 
                 entity.HasMany(c => c.Prets)
                 .WithOne(c => c.Emprunteur)
@@ -80,7 +86,7 @@ namespace DAL
 
 
 
-            // INITIALISER LA BDD
+            // TODO : INITIALISER LA BDD avec une ID unique entre compte et user comme HR
             // SEED
 
             // var c1 = new CategorieDAO() { Nom = "Thriller" };

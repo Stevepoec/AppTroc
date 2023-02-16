@@ -14,26 +14,9 @@ public class ObjetController : Controller
         this.mapper = mapper;
     }
 
-    public IActionResult Index(string searchText, bool json=false){
-           //var p = new Pioche(); // Peut marcher mais pas bon
-        // Couplage fort
-        // Gestion limitée des instances
-
-        if (searchText == null)
-        {
-            searchText = "";
-        }
-        // Recherche des résultats dans la BDD
-        var daos = db.Objets.Where(c => c.Nom_Objet.Contains(searchText));
-        // Je souhaite afficher les daos dans un document HTML
-        // Par défuat il se toruve dans /Views/Film/Index.cshtml
-
-        // Je transforme les objets FilmDAO en objets FilmModel
-        var ObjetModels = mapper.Map<IEnumerable<ObjetModel>>(daos);
-        if(json) {
-            return Json(ObjetModels);
-        }
-        return View(ObjetModels);
+    public IActionResult Index(){
+           var objetsDAO=db.Objets.ToArray();
+        return View();
     
     }
 

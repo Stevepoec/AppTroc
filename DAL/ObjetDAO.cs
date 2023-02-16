@@ -12,7 +12,7 @@ public class ObjetDAO
 
     public Guid Id_Proprietaire {get;set;}
 
-    public UtilisateurDAO Proprietaire {get; set;}
+    public AppUserDAO Proprietaire {get; set;}
     public virtual ICollection<PhotoDAO> Photos {get;set;}
     public virtual ICollection<PretDAO> Prets {get;set;}
 

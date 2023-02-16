@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ZsuF4E75JdZ/v6/+3Xfv5E9eSyZ76aWSm8fkgVuuc8B/YjkJldJy/AYXNx5eX96UGsSWlXCAsf6Metl5mDYq9A==",
+  "dgSpecHash": "sFMPfjFZwVY4a5OShanJt/HRCci0SeDqfSjwpliEM9RTyJUUxeouUXEee8qzgW1f6e7CT2LXxnaCKYPVmRma/A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\IB\\Desktop\\TrocApp\\AppTroc\\SERVERMVC\\SERVERMVC.csproj",
+  "projectFilePath": "C:\\Users\\IB\\Desktop\\Projet\\Apptroc\\AppTroc\\SERVERMVC\\SERVERMVC.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\IB\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\IB\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\6.0.0\\microsoft.aspnetcore.authentication.jwtbearer.6.0.0.nupkg.sha512",

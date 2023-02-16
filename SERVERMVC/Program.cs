@@ -1,23 +1,41 @@
-using AutoMapper;
 using DAL;
+using AutoMapper;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 
-var configMapper=new MapperConfiguration(options=>{
-    // créé un mapping propriété à propriété
-    // Id <=> Id
-    options.CreateMap<UtilisateurDAO,UtilisateurModel>().ReverseMap();
-    options.CreateMap<PretDAO,PretModel>().ReverseMap();
-    options.CreateMap<ObjetDAO,ObjetModel>().ReverseMap();
-    options.CreateMap<PhotoDAO,PhotoModel>().ReverseMap();
+var configMapping = new MapperConfiguration(options =>
+{
+    options.CreateMap<ObjetDAO, ObjetModel>().ReverseMap();
 });
 
-var mapper=configMapper.CreateMapper();
 
 
 var builder = WebApplication.CreateBuilder(args);
 
+
+
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddDbContext<TrocDAL>(options =>
+{
+    // Je fais référence à la chaine de connection enregistrée dans le fichier de config
+    options.UseSqlServer("name=TrocBDDConnectionString");
+});
+// Ajoute les services authentification
+// en utilisant les options de base de JwtBearerDefaults
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer();
+// Ajoute des services liés à l'authentification avec le context HRContext
+// objets mis dans DI
+// UserManager => objet qui gere les Utilisateurs
+// RoleManager => objet qui gere les roles
+// SignInManager => objet qui gere les token
+builder.Services.AddIdentity<UserDAO, RoleDAO>()
+    .AddEntityFrameworkStores<TrocDAL>();
+// Ajout du mapper à l'injection de dépendance en mode singleton
+// Demande dans un constructeur de IMapper => un seul objet retourné
+builder.Services.AddSingleton<IMapper>(configMapping.CreateMapper());
 
 var app = builder.Build();
 
@@ -33,14 +51,12 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
+app.UseAuthentication();
 
 app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=Objet}/{action=Index}/{id?}");
 
 app.Run();
-
-
-
