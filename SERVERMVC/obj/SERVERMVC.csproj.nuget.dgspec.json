@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\IB\\Desktop\\Projet\\Apptroc\\AppTroc\\AppTroc.csproj": {}
+    "C:\\Users\\IB\\Desktop\\Projet\\Apptroc\\AppTroc\\SERVERMVC\\SERVERMVC.csproj": {}
   },
   "projects": {
-    "c:\\Users\\IB\\Desktop\\Projet\\Apptroc\\AppTroc\\AppTroc.csproj": {
+    "C:\\Users\\IB\\Desktop\\Projet\\Apptroc\\AppTroc\\SERVERMVC\\SERVERMVC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\IB\\Desktop\\Projet\\Apptroc\\AppTroc\\AppTroc.csproj",
-        "projectName": "AppTroc",
-        "projectPath": "c:\\Users\\IB\\Desktop\\Projet\\Apptroc\\AppTroc\\AppTroc.csproj",
+        "projectUniqueName": "C:\\Users\\IB\\Desktop\\Projet\\Apptroc\\AppTroc\\SERVERMVC\\SERVERMVC.csproj",
+        "projectName": "SERVERMVC",
+        "projectPath": "C:\\Users\\IB\\Desktop\\Projet\\Apptroc\\AppTroc\\SERVERMVC\\SERVERMVC.csproj",
         "packagesPath": "C:\\Users\\IB\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\IB\\Desktop\\Projet\\Apptroc\\AppTroc\\obj\\",
+        "outputPath": "C:\\Users\\IB\\Desktop\\Projet\\Apptroc\\AppTroc\\SERVERMVC\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\IB\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -39,20 +39,6 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
-          "dependencies": {
-            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
-              "target": "Package",
-              "version": "[6.0.0, )"
-            },
-            "Microsoft.EntityFrameworkCore": {
-              "target": "Package",
-              "version": "[6.0.0, )"
-            },
-            "Microsoft.EntityFrameworkCore.SqlServer": {
-              "target": "Package",
-              "version": "[6.0.0, )"
-            }
-          },
           "imports": [
             "net461",
             "net462",
@@ -65,6 +51,9 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }

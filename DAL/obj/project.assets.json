@@ -2086,11 +2086,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\IB\\Desktop\\Fil Rouge\\AppTroc\\AppTroc.csproj",
+      "projectUniqueName": "C:\\Users\\IB\\Desktop\\Projet\\Apptroc\\AppTroc\\DAL\\AppTroc.csproj",
       "projectName": "AppTroc",
-      "projectPath": "C:\\Users\\IB\\Desktop\\Fil Rouge\\AppTroc\\AppTroc.csproj",
+      "projectPath": "C:\\Users\\IB\\Desktop\\Projet\\Apptroc\\AppTroc\\DAL\\AppTroc.csproj",
       "packagesPath": "C:\\Users\\IB\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\IB\\Desktop\\Fil Rouge\\AppTroc\\obj\\",
+      "outputPath": "C:\\Users\\IB\\Desktop\\Projet\\Apptroc\\AppTroc\\DAL\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\IB\\AppData\\Roaming\\NuGet\\NuGet.Config",
