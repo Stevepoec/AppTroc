@@ -1,0 +1,9 @@
+@model Objet.IndexViewModel
+<h3>Liste des objets</h3>
+<hr>
+<ul>
+    @foreach (var e in Model.Objets)
+    {
+        <li>@e.Nom_Objet - @e.Description_Courte - @e.Descrition_Longue - @e.Valeur</li>
+    }
+</ul>

@@ -15,8 +15,10 @@ public class ObjetController : Controller
     }
 
     public IActionResult Index(){
-           var objetsDAO=db.Objets.ToArray();
-        return View();
+           var daos=db.Objets.ToArray();
+           var models = mapper.Map<IEnumerable<ObjetModel>>(daos);
+           var vm = new Objet.IndexViewModel() {Objets=models};
+        return View(vm);
     
     }
 
@@ -29,8 +31,8 @@ public IActionResult Details(Guid id)
             return RedirectToAction("Index");
         }
         
-        var modelFilm = mapper.Map<ObjetModel>(film);
-        return View(modelFilm);
+        var modelObjet = mapper.Map<ObjetModel>(film);
+        return View(modelObjet);
     }
 
     [HttpGet]
