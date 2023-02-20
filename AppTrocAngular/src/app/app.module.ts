@@ -8,11 +8,13 @@ import { LoginComponent } from './pages/login/login.component';
 import { environment } from 'src/environments/environment';
 import { ListObjetsComponent } from './pages/list-objets/list-objets.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { ListSearchResultComponent } from './controls/list-search-result/list-search-result.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ListObjetsComponent,
+    ListSearchResultComponent,
     AccueilComponent,
     LoginComponent
   ],

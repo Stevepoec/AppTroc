@@ -97,3 +97,9 @@ C:\Users\IB\Desktop\Projet\Apptroc\AppTroc\SERVERMVC\obj\Debug\net7.0\scopedcss\
 C:\Users\IB\Desktop\Projet\Apptroc\AppTroc\SERVERMVC\obj\Debug\net7.0\SERVERMVC.csproj.CopyComplete
 C:\Users\IB\Desktop\Projet\Apptroc\AppTroc\SERVERMVC\obj\Debug\net7.0\SERVERMVC.genruntimeconfig.cache
 C:\Users\IB\Desktop\Projet\Apptroc\AppTroc\SERVERMVC\obj\Debug\net7.0\ref\SERVERMVC.dll
+C:\Users\IB\Desktop\Projet\Apptroc\AppTroc\SERVERMVC\bin\Debug\net7.0\System.Web.Cors.dll
+C:\Users\IB\Desktop\Projet\Apptroc\AppTroc\SERVERMVC\bin\Debug\net7.0\System.Net.Http.Formatting.dll
+C:\Users\IB\Desktop\Projet\Apptroc\AppTroc\SERVERMVC\bin\Debug\net7.0\System.Web.Http.dll
+C:\Users\IB\Desktop\Projet\Apptroc\AppTroc\SERVERMVC\bin\Debug\net7.0\System.Web.Http.Cors.dll
+C:\Users\IB\Desktop\Projet\Apptroc\AppTroc\SERVERMVC\bin\Debug\net7.0\Newtonsoft.Json.dll
+C:\Users\IB\Desktop\Projet\Apptroc\AppTroc\SERVERMVC\bin\Debug\net7.0\Newtonsoft.Json.Bson.dll

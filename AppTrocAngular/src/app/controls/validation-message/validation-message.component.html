@@ -1,0 +1,17 @@
+<div  *ngIf="model.errors">
+    <div *ngIf="model.errors['required']">
+        Le {{model.name}} est requis
+    </div>
+    <div *ngIf="model.errors['minlength']">
+        Ajouter {{model.errors['minlength'].requiredLength - model.errors['minlength'].actualLength}} charactères
+    </div>
+    <div *ngIf="model.errors['pattern']">
+        {{patternMessage.replace('{0}', model.name)}}
+    </div>
+    <div *ngIf="model.errors['min']">
+        Trop petit (minimum : {{model.errors['min'].min}})
+    </div>
+    <div *ngIf="model.errors['max']">
+        Trop grand (maximum : {{model.errors['max'].max}})
+    </div>
+</div>   

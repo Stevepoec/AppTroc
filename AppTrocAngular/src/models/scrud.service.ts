@@ -11,5 +11,5 @@ export abstract class SCRUDService<T> {
      abstract deleteItemAsync(id:Guid):Promise<void>;  // Delete
      abstract updateItemAsync(id:Guid,item:T):Promise<void>; // Update
      abstract getItemAsync(id:string):Promise<T>; // Read
-     //abstract searchItemAsync(searchText:string):Promise<SearchResult[]>; // Search
+     abstract searchItemAsync(searchText:string):Promise<SearchResult[]>; // Search
   }

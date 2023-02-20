@@ -21,32 +21,48 @@ export class ListObjetsComponent {
 
   }
 
+  operationEnCours=false;
+  resultats?:SearchResult[];
+  messageErreur?:string;
 
-  operationEnCours = false;
-  resultats?: Objet;
-  messageErreur?: string;
+  async rechercher(text:string){
+
+    // var b=new HTMLButtonElement();
+    // b.addEventListener("click",()=>{
+
+    // })
 
 
-  async afficherListObjet(id : string) {
-
-    this.operationEnCours = true;
-    this.messageErreur = undefined;
-    this.resultats = undefined;
+    // Je lance l'opération asynchrone
+    // Cas 1 => Opération en cours de réalisation
+    // Cas 2 => tout se passe bien => affichage des résultats
+    // Cas 3 => erreur de l'opération => affichage message erreur
+    this.operationEnCours=true;
+    this.messageErreur=undefined;
+    this.resultats=undefined;
     try {
       // La recherche des resultats (films correspondant au text)
       // est faite par un service. Pourquoi ?
       // - Pour ne pas encombrer le component avec du code
       // - parce que peut-être d'autres components auront besoin de rechercher des films / text
       // - parce que le service est interchangeable
-      this.resultats = await this.objetService.getItemAsync(id);
+      this.resultats=await this.objetService.searchItemAsync(text);  
       console.log(this.resultats);
     } catch (err) {
-      this.messageErreur = "Pas bon";
+      this.messageErreur="Pas bon";
     }
 
-    this.operationEnCours = false;
+    this.operationEnCours=false;
 
   }
 
-}
+  // Permet à l'utilisateur de voir le film clické
+  showObjet(r:SearchResult){
+    // Le router permet de naviguer vers le détail d'un film
+    // le r (SearchResult) contient l'id
+    this.router.navigateByUrl("edit-film/"+r.Id_Objet);
+  }
 
+
+
+}
