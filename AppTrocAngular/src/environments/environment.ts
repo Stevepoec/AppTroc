@@ -4,7 +4,7 @@ import { ObjetService } from "src/models/objet.service";
 // Doivent être utilisées en prod
 export const environment={
     raisonSociale:"Application de troc",
-    serviceUrl:".",
+    serviceUrl:"http://localhost:5117/API",
     providers: [
         {provide: ObjetService, useClass:ObjetHttpService}
       ]

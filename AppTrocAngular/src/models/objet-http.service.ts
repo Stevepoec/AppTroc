@@ -29,30 +29,34 @@ export class ObjetHttpService implements ObjetService {
     var resultatPromesse = await promesse as boolean;
     return guid;
   }
+
   deleteItemAsync(id: Guid): Promise<void> {
     throw new Error('Method not implemented.');
   }
   updateItemAsync(id: Guid, item: Objet): Promise<void> {
     throw new Error('Method not implemented.');
   }
-  async getItemAsync(id: Guid): Promise<Objet> {
+  async getItemAsync(id: string): Promise<Objet> {
     var requete = this.httpClient.get(environment.serviceUrl+`/Objet/${id.toString()}`);
     var promesse = lastValueFrom(requete);
 
-    var dto = await promesse as { id: string, t: string, c: boolean, d: number, ds: string };
+    var dto = await promesse as { id: string, no: string, dc: string,dl: string, v: number  };
 
-    var resultat = new Objet(dto.t);
-    resultat.couleur = dto.c;
-    resultat.duree = dto.d;
-    resultat.dateSortie = new Date(dto.ds); // Attention : Le serveur m'envoie une chaine => date
+    var resultat = new Objet(dto.no);
+    resultat.Description_Courte = dto.dc;
+    resultat.Descrition_Longue = dto.dl;
+    resultat.Valeur = dto.v;
     return resultat;
   }
+
   async searchItemAsync(searchText: string) {
+    throw new Error('Method not implemented.');
+  }
     // envoyer une requet http au serveur : https://localhost:7282/Film
     // Objet spécialisé : HttpClient dans le module HttpModule
     // Créer er renvoyer des SearchResults à partir des résultats
     // Créaqtion d'un requète http avec verbe GET
-    var requete = this.httpClient.get<SearchResultDTO[]>(environment.serviceUrl+"/Film?searchText="+searchText);
+    // // var requete = this.httpClient.get<SearchResultDTO[]>(environment.serviceUrl+"/Film?searchText="+searchText);
 
     // Attention à Cors
     // Cross Origin Request Security
@@ -64,25 +68,25 @@ export class ObjetHttpService implements ObjetService {
     // Connection au serveur
     // Envoi des données
     // Reception des données
-    var promesse = lastValueFrom(requete); // Attend que la requète soit terminée
+    // //var promesse = lastValueFrom(requete); // Attend que la requète soit terminée
 
     // dto qui est fourni par le service
     // Je ne l'utilise pas dans mon app
     // car la structure du dto peu varier
     // d'un service à l'autre ou par maj du service
-    var dtos = await promesse;
+    // // var dtos = await promesse;
     // transformer mes elements renvoyés par les serveur :
     // {id:string,l:string,i?:string,sd?:string}
     // en SearchResult
-    var resultats = dtos.map(dto => ({
-      id: Guid.parse(dto.id),
-      indication: dto.sd,
-      label: dto.l,
-      shortDescription: dto.i
-    } as SearchResult));
-    return resultats;
+    // // var resultats = dtos.map(dto => ({
+    // //  id: Guid.parse(dto.id),
+    // //  indication: dto.sd,
+    // //  label: dto.l,
+    // // shortDescription: dto.i
+    // // } as SearchResult));
+    // // return resultats;
 
-  }
+  // }
 
 
 }

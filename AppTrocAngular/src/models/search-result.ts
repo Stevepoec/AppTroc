@@ -6,4 +6,5 @@ export interface SearchResult{
     Description_Courte : string;
     Descrition_Longue : string;
     Id_Objet:Guid;
+    valeur : number;
 }
