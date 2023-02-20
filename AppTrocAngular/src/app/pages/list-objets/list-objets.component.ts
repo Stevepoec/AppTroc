@@ -46,8 +46,15 @@ export class ListObjetsComponent {
       // - Pour ne pas encombrer le component avec du code
       // - parce que peut-être d'autres components auront besoin de rechercher des films / text
       // - parce que le service est interchangeable
+
+  
+
+      
       this.resultats=await this.objetService.searchItemAsync(text);  
       console.log(this.resultats);
+      this.operationEnCours=false
+      
+
     } catch (err) {
       this.messageErreur="Pas bon";
     }
@@ -60,7 +67,7 @@ export class ListObjetsComponent {
   showObjet(r:SearchResult){
     // Le router permet de naviguer vers le détail d'un film
     // le r (SearchResult) contient l'id
-    this.router.navigateByUrl("edit-film/"+r.Id_Objet);
+     this.router.navigateByUrl("edit-objet/"+r.Id_Objet);
   }
 
 

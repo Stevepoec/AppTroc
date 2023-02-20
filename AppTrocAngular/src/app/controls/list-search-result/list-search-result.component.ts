@@ -1,4 +1,4 @@
-import { SimpleChanges } from '@angular/core';
+// import { SimpleChanges } from '@angular/core';
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { SearchResult } from 'src/models/search-result';
 
@@ -31,18 +31,18 @@ export class ListSearchResultComponent {
   @Input()
   searchResults?:SearchResult[];
 
-  ngOnChanges(changes:SimpleChanges){
-    console.log("Changement de searchResults dans list-search-result.component");
-    console.log(changes["searchResults"]);
+  // ngOnChanges(changes:SimpleChanges){
+  //   console.log("Changement de searchResults dans list-search-result.component");
+  //   console.log(changes["searchResults"]);
 
     // Exécuté automatiquement lorsque la valeur d'un champs / propriété
     // marquée avec @Input est modifiée
     // permet à ce component d'agit en cas de changement
-  }
+  // }
 
   onSearchResultClick(r:SearchResult){
     this.searchResultClick.emit(r);
-    // Pas possible car ce component (list-searc-result) va être utilisé 
+    // Pas possible car ce component (list-search-result) va être utilisé 
     // Pour afficher une liste d'acteurs ou de films ou de factures
     // showFilm();
   }
