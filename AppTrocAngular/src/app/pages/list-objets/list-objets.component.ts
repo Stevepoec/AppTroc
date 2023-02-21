@@ -67,7 +67,7 @@ export class ListObjetsComponent {
   showObjet(r:SearchResult){
     // Le router permet de naviguer vers le détail d'un film
     // le r (SearchResult) contient l'id
-     this.router.navigateByUrl("edit-objet/"+r.Id_Objet);
+     this.router.navigateByUrl("edit-objet/"+r.id);
   }
 
 
