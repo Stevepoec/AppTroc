@@ -37,7 +37,7 @@ export class ObjetHttpService implements ObjetService {
   updateItemAsync(id: Guid, item: Objet): Promise<void> {
     throw new Error('Method not implemented.');
   }
-  async getItemAsync(id: string): Promise<Objet> {
+  async getItemAsync(id: Guid): Promise<Objet> {
     var requete = this.httpClient.get(environment.serviceUrl+`/Objet/${id.toString()}`);
     var promesse = lastValueFrom(requete);
 

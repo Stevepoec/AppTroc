@@ -1,3 +1,5 @@
+import { Guid } from "guid-typescript";
+
 export class Objet {
     constructor(Nom_Objet: string) {
         // set du Nom_Objet
@@ -44,6 +46,16 @@ export class Objet {
         this._Valeur = v;
     }
     //#endregion
+
+        //#region Valeur
+        private _Id_Proprietaire: Guid | undefined;
+        public get Id_Proprietaire() {
+            return this._Id_Proprietaire;
+        }
+        public set Id_Proprietaire(v: Guid | undefined) {
+            this._Id_Proprietaire = v;
+        }
+        //#endregion
 
 
 }

@@ -15,10 +15,12 @@
 </div>
 <div class="alert alert-danger" *ngIf="messageErreur">
   {{messageErreur}}
-</div> -->
+</div>
 
-<app-list-search-result *ngIf="resultats"
-  [searchResults]="resultats"></app-list-search-result>
+<app-list-search-result 
+*ngIf="resultats" 
+(searchResultClick)="showObjet($event)"
+[searchResults]="resultats">
 
-<!-- <app-list-search-result *ngIf="resultats" (searchResultClick)="showObjet($event)"
-  [searchResults]="resultats"></app-list-search-result> -->
+</app-list-search-result>
+

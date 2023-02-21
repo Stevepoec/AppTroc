@@ -26,5 +26,13 @@ public class ObjetController : ControllerBase
     
     }
 
+[HttpGet("{id:guid}")]
+    public object GetObjet(Guid id){
+        var dao=db.Objets.Find(id);
+        var model= mapper.Map<ObjetModel>(dao);
+        return model;
+
+    }
+
 
 }
