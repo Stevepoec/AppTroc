@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { SearchResult } from 'src/models/search-result';
 
 @Component({
   selector: 'app-accueil',
@@ -6,5 +7,19 @@ import { Component } from '@angular/core';
   styleUrls: ['./accueil.component.scss']
 })
 export class AccueilComponent {
+
+  
+  @Output() 
+  
+  searchResultClick=new EventEmitter<SearchResult>(); 
+  
+  @Input()
+  searchResults?:SearchResult[];
+
+
+  onSearchResultClick(r:SearchResult){
+    this.searchResultClick.emit(r);
+
+  }
 
 }

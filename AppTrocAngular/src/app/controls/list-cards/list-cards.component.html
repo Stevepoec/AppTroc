@@ -1,0 +1,26 @@
+<p>list-cards works!</p>
+
+<div class="mb-3">
+    <label class="form-label">Recherche</label>
+    <input id="input-searchText" class="form-control" #searchText>
+</div>
+<div class="mb-3">
+  <button class="btn btn-secondary" routerLink="/create-objet">Ajouter</button>
+  <button  class="btn btn-primary" (click)="rechercher(searchText.value)">Rechercher</button>
+</div> 
+<hr>  
+
+<div class="album py-5 bg-light">
+    <div class="container">
+        
+
+            <app-card-objet 
+                *ngIf="resultats"
+                (searchResultClick)="showObjet($event)"
+                [searchResults]="resultats">
+            </app-card-objet>
+
+        </div>
+    </div>
+   
+    
