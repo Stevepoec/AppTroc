@@ -7,6 +7,7 @@ using Microsoft.EntityFrameworkCore;
 var configMapping = new MapperConfiguration(options =>
 {
     options.CreateMap<ObjetDAO, ObjetModel>().ReverseMap();
+    options.CreateMap<AppUserDAO,UtilisateurModel>().ReverseMap();
 });
 
 
@@ -67,5 +68,11 @@ app.MapControllers();
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Objet}/{action=Index}/{id?}");
+
+
+app.MapControllerRoute(
+    name: "appUser",
+    pattern: "{controller=appUser}/{action=Index}/{id?}");
+
 
 app.Run();

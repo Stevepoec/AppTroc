@@ -1,4 +1,4 @@
-<div *ngIf="objet">
+<div *ngIf="objet && appUser">
 <div class="directory-details pt-padding">
     <div class="container">
     <div class="row">
@@ -39,7 +39,7 @@
     </div>
     <div class="card" style="width: 18rem;">
         <div class="card-body">
-          <h5 class="card-title">Nom du proprietaire ⭐⭐⭐⭐★</h5>
+          <h5 class="card-title">{{appUser.Nom}} ⭐⭐⭐⭐★</h5>
           <p class="card-text">Nombre d'annonce</p>
           <a href="#" class="btn btn-success">Emprunter</a>
           <p></p>

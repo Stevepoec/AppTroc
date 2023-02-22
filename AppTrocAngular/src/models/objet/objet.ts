@@ -47,12 +47,12 @@ export class Objet {
     }
     //#endregion
 
-    //#region Valeur
-        private _Id_Proprietaire: Guid | undefined;
+    //#region Proprietaire
+        private _Id_Proprietaire!: Guid ;
         public get Id_Proprietaire() {
             return this._Id_Proprietaire;
         }
-        public set Id_Proprietaire(v: Guid | undefined) {
+        public set Id_Proprietaire(v: Guid ) {
             this._Id_Proprietaire = v;
         }
     //#endregion

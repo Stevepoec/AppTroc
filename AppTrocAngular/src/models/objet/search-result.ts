@@ -7,4 +7,5 @@ export interface SearchResult{
     dl : string;
     id:Guid;
     v : number;
+    id_prop : Guid;
 }

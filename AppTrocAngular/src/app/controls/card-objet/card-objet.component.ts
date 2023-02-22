@@ -25,6 +25,7 @@ export class CardObjetComponent {
 
   onSearchResultClick(r:SearchResult){
     this.searchResultClick.emit(r);
+    console.log("coucou mais depuis card-object");
     // Pas possible car ce component (list-searc-result) va être utilisé 
     // Pour afficher une liste d'acteurs ou de films ou de factures
     // showFilm();

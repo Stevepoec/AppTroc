@@ -41,12 +41,13 @@ export class ObjetHttpService implements ObjetService {
     var requete = this.httpClient.get(environment.serviceUrl+`/Objet/${id.toString()}`);
     var promesse = lastValueFrom(requete);
 
-    var dto = await promesse as { id: string, no: string, dc: string,dl: string, v: number  };
+    var dto = await promesse as { id: string, no: string, dc: string,dl: string, v: number, idp:Guid  };
 
     var resultat = new Objet(dto.no);
     resultat.Description_Courte = dto.dc;
     resultat.Descrition_Longue = dto.dl;
     resultat.Valeur = dto.v;
+    resultat.Id_Proprietaire = dto.idp;
     return resultat;
   }
 
