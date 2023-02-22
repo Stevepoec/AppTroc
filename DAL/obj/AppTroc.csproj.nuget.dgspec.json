@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\IB\\Desktop\\Projet\\Apptroc\\AppTroc\\DAL\\AppTroc.csproj": {}
+    "C:\\Users\\IB\\Desktop\\TrocApp\\AppTroc\\DAL\\AppTroc.csproj": {}
   },
   "projects": {
-    "C:\\Users\\IB\\Desktop\\Projet\\Apptroc\\AppTroc\\DAL\\AppTroc.csproj": {
+    "C:\\Users\\IB\\Desktop\\TrocApp\\AppTroc\\DAL\\AppTroc.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\IB\\Desktop\\Projet\\Apptroc\\AppTroc\\DAL\\AppTroc.csproj",
+        "projectUniqueName": "C:\\Users\\IB\\Desktop\\TrocApp\\AppTroc\\DAL\\AppTroc.csproj",
         "projectName": "AppTroc",
-        "projectPath": "C:\\Users\\IB\\Desktop\\Projet\\Apptroc\\AppTroc\\DAL\\AppTroc.csproj",
+        "projectPath": "C:\\Users\\IB\\Desktop\\TrocApp\\AppTroc\\DAL\\AppTroc.csproj",
         "packagesPath": "C:\\Users\\IB\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\IB\\Desktop\\Projet\\Apptroc\\AppTroc\\DAL\\obj\\",
+        "outputPath": "C:\\Users\\IB\\Desktop\\TrocApp\\AppTroc\\DAL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\IB\\AppData\\Roaming\\NuGet\\NuGet.Config",

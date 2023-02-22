@@ -25,6 +25,8 @@ export class DetailsObjetComponent implements OnInit {
 
   async ngOnInit(){
 
+    console.log("coucou depuis details-objet");
+
     // PREMIERE INFO
     
     let id=this.activatedRoute.snapshot.params["id"];

@@ -48,10 +48,9 @@ export class ListCardsComponent {
 
 
   showObjet(r:SearchResult){
-    console.log('coucou');
      this.router.navigateByUrl("details-objet/"+r.id);
+     console.log("coucou mais depuis list-card");
+
   }
-
-
 
 }

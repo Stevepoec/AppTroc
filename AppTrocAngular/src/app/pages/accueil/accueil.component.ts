@@ -14,12 +14,15 @@ export class AccueilComponent {
   searchResultClick=new EventEmitter<SearchResult>(); 
   
   @Input()
+  
   searchResults?:SearchResult[];
 
 
   onSearchResultClick(r:SearchResult){
     this.searchResultClick.emit(r);
-
-  }
+      console.log("coucou mais depuis accueil");
+ 
+   }
+  
 
 }

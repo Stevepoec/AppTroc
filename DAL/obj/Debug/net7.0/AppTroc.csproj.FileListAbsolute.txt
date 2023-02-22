@@ -10,3 +10,15 @@ C:\Users\IB\Desktop\Projet\Apptroc\AppTroc\DAL\obj\Debug\net7.0\AppTroc.dll
 C:\Users\IB\Desktop\Projet\Apptroc\AppTroc\DAL\obj\Debug\net7.0\refint\AppTroc.dll
 C:\Users\IB\Desktop\Projet\Apptroc\AppTroc\DAL\obj\Debug\net7.0\AppTroc.pdb
 C:\Users\IB\Desktop\Projet\Apptroc\AppTroc\DAL\obj\Debug\net7.0\ref\AppTroc.dll
+C:\Users\IB\Desktop\TrocApp\AppTroc\DAL\bin\Debug\net7.0\AppTroc.deps.json
+C:\Users\IB\Desktop\TrocApp\AppTroc\DAL\bin\Debug\net7.0\AppTroc.dll
+C:\Users\IB\Desktop\TrocApp\AppTroc\DAL\bin\Debug\net7.0\AppTroc.pdb
+C:\Users\IB\Desktop\TrocApp\AppTroc\DAL\obj\Debug\net7.0\AppTroc.csproj.AssemblyReference.cache
+C:\Users\IB\Desktop\TrocApp\AppTroc\DAL\obj\Debug\net7.0\AppTroc.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\IB\Desktop\TrocApp\AppTroc\DAL\obj\Debug\net7.0\AppTroc.AssemblyInfoInputs.cache
+C:\Users\IB\Desktop\TrocApp\AppTroc\DAL\obj\Debug\net7.0\AppTroc.AssemblyInfo.cs
+C:\Users\IB\Desktop\TrocApp\AppTroc\DAL\obj\Debug\net7.0\AppTroc.csproj.CoreCompileInputs.cache
+C:\Users\IB\Desktop\TrocApp\AppTroc\DAL\obj\Debug\net7.0\AppTroc.dll
+C:\Users\IB\Desktop\TrocApp\AppTroc\DAL\obj\Debug\net7.0\refint\AppTroc.dll
+C:\Users\IB\Desktop\TrocApp\AppTroc\DAL\obj\Debug\net7.0\AppTroc.pdb
+C:\Users\IB\Desktop\TrocApp\AppTroc\DAL\obj\Debug\net7.0\ref\AppTroc.dll

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "WaHgVXsaxi83OndROrzG9+Wkrskanbl8by9f/G0ficionytvrpzTMMG6dw4jpdEPSeWRENpTCNh4VHlPgy7OUQ==",
+  "dgSpecHash": "b4xhk2NCGXVwJWQE/Q8ul0IFdfVZe9WF9hwaiJUJykv9O2CM5rshdvATfOQAF9DHBoaI8UMBU84z29JB5nw67A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\IB\\Desktop\\Projet\\Apptroc\\AppTroc\\SERVERMVC\\SERVERMVC.csproj",
+  "projectFilePath": "C:\\Users\\IB\\Desktop\\TrocApp\\AppTroc\\SERVERMVC\\SERVERMVC.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\IB\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\IB\\.nuget\\packages\\microsoft.aspnet.cors\\5.2.9\\microsoft.aspnet.cors.5.2.9.nupkg.sha512",

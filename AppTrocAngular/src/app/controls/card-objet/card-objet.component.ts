@@ -17,7 +17,6 @@ export class CardObjetComponent {
   searchResults?:SearchResult[];
 
   ngOnChanges(changes:SimpleChanges){
-    console.log("Changement de searchResults dans list-search-result.component");
     console.log(changes["searchResults"]);
 
   }

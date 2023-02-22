@@ -1,16 +1,22 @@
 <div class="container">
 <nav class="navbar navbar-expand-lg navbar-light bg-light p-8 navig">
-    <a class="navbar-brand" href="#">AppTroc</a>
+    <a class="navbar-brand" routerLink="/accueil">AppTroc</a>  
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
   
     <div class="collapse navbar-collapse flex_nav_search" id="navbarSupportedContent">
-
-        <form class="form-inline my-2 my-lg-0 flex_elem">
+        <div class="form-inline my-2 my-lg-0 flex_elem">
           <input id="input-searchText" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" #searchText>
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit" (click)="rechercher(searchText.value)">Search</button>
-        </form>
+          <button class="btn btn-outline-success my-2 my-sm-0"> <a [routerLink]="['/', 'recherche', {queryParams: searchText}]">Search</a></button>
+        </div>
     </div>
   </nav>
 </div>
+
+<!-- <app-card-objet 
+*ngIf="resultats"
+(searchResultClick)="showObjet($event)"
+[searchResults]="resultats">
+</app-card-objet> -->
+

@@ -33,6 +33,8 @@ export class ListObjetsComponent {
     try {
       this.resultats=await this.objetService.searchItemAsync(text);  
       console.log(this.resultats);
+      console.log("coucouc depuis list-objet");
+
       this.operationEnCours=false
       
 

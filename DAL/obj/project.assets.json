@@ -821,11 +821,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\IB\\Desktop\\Projet\\Apptroc\\AppTroc\\DAL\\AppTroc.csproj",
+      "projectUniqueName": "C:\\Users\\IB\\Desktop\\TrocApp\\AppTroc\\DAL\\AppTroc.csproj",
       "projectName": "AppTroc",
-      "projectPath": "c:\\Users\\IB\\Desktop\\Projet\\Apptroc\\AppTroc\\DAL\\AppTroc.csproj",
+      "projectPath": "C:\\Users\\IB\\Desktop\\TrocApp\\AppTroc\\DAL\\AppTroc.csproj",
       "packagesPath": "C:\\Users\\IB\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\IB\\Desktop\\Projet\\Apptroc\\AppTroc\\DAL\\obj\\",
+      "outputPath": "C:\\Users\\IB\\Desktop\\TrocApp\\AppTroc\\DAL\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\IB\\AppData\\Roaming\\NuGet\\NuGet.Config",
