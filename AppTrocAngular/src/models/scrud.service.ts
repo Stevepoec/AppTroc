@@ -1,5 +1,5 @@
 import { Guid } from "guid-typescript";
-import { SearchResult } from "./search-result";
+import { SearchResult } from "./objet/search-result";
 
 // Desdcription des opérations SCRUD pour un type T
 // T peut être n'importe quelle class

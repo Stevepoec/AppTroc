@@ -1,6 +1,6 @@
 import { SimpleChanges } from '@angular/core';
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { SearchResult } from 'src/models/search-result';
+import { SearchResult } from 'src/models/objet/search-result';
 
 @Component({
   selector: 'app-list-search-result',

@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Guid } from 'guid-typescript';
 import { appUser } from 'src/models/appUser/appUser';
-import { Objet } from 'src/models/objet';
-import { ObjetService } from 'src/models/objet.service';
+import { Objet } from 'src/models/objet/objet';
+import { ObjetService } from 'src/models/objet/objet.service';
 
 @Component({
   selector: 'app-details-objet',

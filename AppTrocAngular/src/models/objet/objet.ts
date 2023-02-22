@@ -47,7 +47,7 @@ export class Objet {
     }
     //#endregion
 
-        //#region Valeur
+    //#region Valeur
         private _Id_Proprietaire: Guid | undefined;
         public get Id_Proprietaire() {
             return this._Id_Proprietaire;
@@ -55,7 +55,7 @@ export class Objet {
         public set Id_Proprietaire(v: Guid | undefined) {
             this._Id_Proprietaire = v;
         }
-        //#endregion
+    //#endregion
 
 
 }

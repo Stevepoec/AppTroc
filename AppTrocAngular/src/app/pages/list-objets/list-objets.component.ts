@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { Guid } from 'guid-typescript';
-import { Objet } from 'src/models/objet';
-import { ObjetService } from 'src/models/objet.service';
-import { SearchResult } from 'src/models/search-result';
+import { Objet } from 'src/models/objet/objet';
+import { ObjetService } from 'src/models/objet/objet.service';
+import { SearchResult } from 'src/models/objet/search-result';
 
 
 @Component({

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { ObjetService } from 'src/models/objet.service';
-import { SearchResult } from 'src/models/search-result';
+import { ObjetService } from 'src/models/objet/objet.service';
+import { SearchResult } from 'src/models/objet/search-result';
 
 @Component({
   selector: 'app-list-cards',
