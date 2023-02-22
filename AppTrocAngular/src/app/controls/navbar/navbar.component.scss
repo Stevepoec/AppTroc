@@ -2,3 +2,15 @@
     display: flex !important;
 
 }
+
+.flex_nav_search {
+    display: flex !important;
+    // align-items: flex-end;
+    // align-self: flex-end;
+    justify-content: flex-end !important;
+}
+
+.navig {
+    display: flex !important;
+    flex-direction: row !important;
+}
