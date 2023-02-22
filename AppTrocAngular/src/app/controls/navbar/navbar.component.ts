@@ -4,13 +4,11 @@ import { ObjetService } from 'src/models/objet/objet.service';
 import { SearchResult } from 'src/models/objet/search-result';
 
 @Component({
-  selector: 'app-list-cards',
-  templateUrl: './list-cards.component.html',
-  styleUrls: ['./list-cards.component.scss']
+  selector: 'app-navbar',
+  templateUrl: './navbar.component.html',
+  styleUrls: ['./navbar.component.scss']
 })
-export class ListCardsComponent {
-
-  
+export class NavbarComponent {
 
   constructor(private objetService: ObjetService,
     private router: Router
@@ -21,10 +19,6 @@ export class ListCardsComponent {
   operationEnCours=false;
   resultats?:SearchResult[];
   messageErreur?:string;
-
-  async ngOnInit(){
-    this.rechercher("")
-  }
 
   async rechercher(text:string){
 
