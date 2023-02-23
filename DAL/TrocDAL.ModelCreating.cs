@@ -209,11 +209,37 @@ namespace DAL
             var pret1 = new PretDAO()
             {
                 Id_Pret = Guid.NewGuid(),
-                Nom_Objet = "tasse 2",
-                Description_Courte = "une jolie tasse",
-                Descrition_Longue = "une jolie tasse pour boire le thé",
-                Valeur = 50.1M,
-                Id_Proprietaire = client1.Id_Utilisateur
+                Date_Debut_Prevue = new DateTime(2022,02,22),
+                Date_Fin_Prevue = new DateTime(2022,03,15),
+                Acceptation = true,
+                Date_Debut_Reel = new DateTime(2022,02,22),
+                Date_Fin_Reel = new DateTime(2022,03,15),
+                Condition_Recuperation = "Enlèvement chez le propriétaire",
+                Condition_Retour = "Déposer chez le propriétaire",
+                Note_Emprunter = 5,
+                Commentaire_Emprunteur = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suspendisse ultrices gravida dictum fusce ut placerat orci. Vel fringilla est ullamcorper eget nulla. Vel risus commodo viverra maecenas accumsan lacus vel facilisis. Ultrices eros in cursus turpis massa tincidunt dui. Odio ut enim blandit volutpat maecenas volutpat blandit aliquam. Pellentesque adipiscing commodo elit at imperdiet dui accumsan sit amet. Ultricies mi eget mauris pharetra et ultrices neque ornare. Nisl vel pretium lectus quam id leo in vitae turpis. Nec ullamcorper sit amet risus nullam eget felis. Congue quisque egestas diam in. Semper feugiat nibh sed pulvinar proin gravida hendrerit. Parturient montes nascetur ridiculus mus. Nec ultrices dui sapien eget mi proin sed libero enim.",
+                Note_Preteur = 5,
+                Commentaire_Preteur = "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suspendisse ultrices gravida dictum fusce ut placerat orci. Vel fringilla est ullamcorper eget nulla. Vel risus commodo viverra maecenas accumsan lacus vel facilisis. Ultrices eros in cursus turpis massa tincidunt dui. Odio ut enim blandit volutpat maecenas volutpat blandit aliquam. Pellentesque adipiscing commodo elit at imperdiet dui accumsan sit amet. Ultricies mi eget mauris pharetra et ultrices neque ornare. Nisl vel pretium lectus quam id leo in vitae turpis. Nec ullamcorper sit amet risus nullam eget felis. Congue quisque egestas diam in. Semper feugiat nibh sed pulvinar proin gravida hendrerit. Parturient montes nascetur ridiculus mus. Nec ultrices dui sapien eget mi proin sed libero enim.",
+                Id_Objet = objet2.Id_Objet,
+                Id_Emprunteur = client2.Id_Utilisateur
+            };
+
+            var pret2 = new PretDAO()
+            {
+                Id_Pret = Guid.NewGuid(),
+                Date_Debut_Prevue = new DateTime(2022,02,22),
+                Date_Fin_Prevue = new DateTime(2022,03,15),
+                Acceptation = true,
+                Date_Debut_Reel = new DateTime(2022,02,22),
+                Date_Fin_Reel = new DateTime(2022,03,15),
+                Condition_Recuperation = "Enlèvement chez le propriétaire",
+                Condition_Retour = "Déposer chez le propriétaire",
+                Note_Emprunter = 5,
+                Commentaire_Emprunteur = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suspendisse ultrices gravida dictum fusce ut placerat orci. Vel fringilla est ullamcorper eget nulla. Vel risus commodo viverra maecenas accumsan lacus vel facilisis. Ultrices eros in cursus turpis massa tincidunt dui. Odio ut enim blandit volutpat maecenas volutpat blandit aliquam. Pellentesque adipiscing commodo elit at imperdiet dui accumsan sit amet. Ultricies mi eget mauris pharetra et ultrices neque ornare. Nisl vel pretium lectus quam id leo in vitae turpis. Nec ullamcorper sit amet risus nullam eget felis. Congue quisque egestas diam in. Semper feugiat nibh sed pulvinar proin gravida hendrerit. Parturient montes nascetur ridiculus mus. Nec ultrices dui sapien eget mi proin sed libero enim.",
+                Note_Preteur = 5,
+                Commentaire_Preteur = "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suspendisse ultrices gravida dictum fusce ut placerat orci. Vel fringilla est ullamcorper eget nulla. Vel risus commodo viverra maecenas accumsan lacus vel facilisis. Ultrices eros in cursus turpis massa tincidunt dui. Odio ut enim blandit volutpat maecenas volutpat blandit aliquam. Pellentesque adipiscing commodo elit at imperdiet dui accumsan sit amet. Ultricies mi eget mauris pharetra et ultrices neque ornare. Nisl vel pretium lectus quam id leo in vitae turpis. Nec ullamcorper sit amet risus nullam eget felis. Congue quisque egestas diam in. Semper feugiat nibh sed pulvinar proin gravida hendrerit. Parturient montes nascetur ridiculus mus. Nec ultrices dui sapien eget mi proin sed libero enim.",
+                Id_Objet = objet3.Id_Objet,
+                Id_Emprunteur = client1.Id_Utilisateur
             };
 
 
