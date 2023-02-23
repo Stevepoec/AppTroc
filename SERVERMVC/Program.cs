@@ -8,6 +8,7 @@ var configMapping = new MapperConfiguration(options =>
 {
     options.CreateMap<ObjetDAO, ObjetModel>().ReverseMap();
     options.CreateMap<AppUserDAO,UtilisateurModel>().ReverseMap();
+    options.CreateMap<PretDAO,PretModel>().ReverseMap();
 });
 
 
@@ -22,7 +23,8 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<TrocDAL>(options =>
 {
     // Je fais référence à la chaine de connection enregistrée dans le fichier de config
-    options.UseSqlServer("name=TrocBDDConnectionString");
+    // options.UseSqlServer("name=TrocBDDConnectionString");
+    options.UseInMemoryDatabase("toto");
 });
 // Ajoute les services authentification
 // en utilisant les options de base de JwtBearerDefaults
@@ -73,6 +75,11 @@ app.MapControllerRoute(
 app.MapControllerRoute(
     name: "appUser",
     pattern: "{controller=appUser}/{action=Index}/{id?}");
+
+
+app.MapControllerRoute(
+    name: "Pret",
+    pattern: "{controller=Pret}/{action=Index}/{id?}");
 
 
 app.Run();

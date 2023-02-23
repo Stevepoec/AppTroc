@@ -245,6 +245,8 @@ namespace DAL
 
             // HASDATA (builder.Entity<EmpruntunDAO...(var,var,var))
 
+            builder.Entity<PretDAO>().HasData(pret1,pret2);
+
             // FIN SEED EMPRUNT
 
 

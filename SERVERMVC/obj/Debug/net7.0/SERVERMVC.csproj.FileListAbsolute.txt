@@ -146,3 +146,4 @@ C:\Users\IB\Desktop\TrocApp\AppTroc\SERVERMVC\bin\Debug\net7.0\runtimes\win\lib\
 C:\Users\IB\Desktop\TrocApp\AppTroc\SERVERMVC\bin\Debug\net7.0\AppTroc.dll
 C:\Users\IB\Desktop\TrocApp\AppTroc\SERVERMVC\bin\Debug\net7.0\AppTroc.pdb
 C:\Users\IB\Desktop\TrocApp\AppTroc\SERVERMVC\obj\Debug\net7.0\SERVERMVC.csproj.CopyComplete
+C:\Users\IB\Desktop\TrocApp\AppTroc\SERVERMVC\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.InMemory.dll

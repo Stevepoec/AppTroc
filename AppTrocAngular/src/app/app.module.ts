@@ -14,6 +14,8 @@ import { ListCardsComponent } from './controls/list-cards/list-cards.component';
 import { DetailsObjetComponent } from './pages/details-objet/details-objet.component';
 import { NavbarComponent } from './controls/navbar/navbar.component';
 import { RechercheComponent } from './pages/recherche/recherche.component';
+import { ListPretsComponent } from './pages/list-prets/list-prets.component';
+import { ListSearchPretComponent } from './controls/list-search-pret/list-search-pret.component';
  
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { RechercheComponent } from './pages/recherche/recherche.component';
     ListCardsComponent,
     DetailsObjetComponent,
     NavbarComponent,
-    RechercheComponent
+    RechercheComponent,
+    ListPretsComponent,
+    ListSearchPretComponent
   ],
   imports: [
     BrowserModule,

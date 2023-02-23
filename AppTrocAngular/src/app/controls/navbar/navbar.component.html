@@ -7,7 +7,7 @@
   
     <div class="collapse navbar-collapse flex_nav_search" id="navbarSupportedContent">
         <div class="form-inline my-2 my-lg-0 flex_elem">
-          <input id="input-searchText" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" #searchText>
+          <input (input)="true" id="input-searchText" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" #searchText>
           <a routerLink="/recherche/{{searchText.value}}"><button class="btn btn-outline-success my-2 my-sm-0"> Search</button></a>
         </div>
     </div>

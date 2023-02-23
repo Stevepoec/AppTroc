@@ -1,0 +1,23 @@
+<h3>Liste des Prets</h3>
+<div class="mb-3">
+    <label class="form-label">Recherche</label>
+    <input id="input-searchText" class="form-control" #searchText>
+</div>
+<div class="mb-3">
+  <button  class="btn btn-primary" (click)="rechercher(searchText.value)">Rechercher</button> -->
+</div> 
+<hr>
+<div *ngIf="operationEnCours" class="spinner-border" role="status">
+  <span class="visually-hidden">Loading...</span>
+</div>
+<div class="alert alert-danger" *ngIf="messageErreur">
+  {{messageErreur}}
+</div>
+
+<app-list-search-pret 
+*ngIf="resultats" 
+(searchResultClick)="showObjet($event)"
+[SearchResultPret]="resultats">
+
+</app-list-search-pret>
+

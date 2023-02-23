@@ -27,9 +27,12 @@ export class RechercheComponent  {
   messageErreur?:string;
 
   async ngOnInit(){
-    let text=this.activatedRoute.snapshot.params["text"];
+    let text=this.activatedRoute.params.subscribe(params=>{
+      
+      this.rechercher(params["text"]);
+    });
 
-    this.rechercher(text)
+
   }
 
   async rechercher(text:string){
