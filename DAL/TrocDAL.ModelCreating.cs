@@ -120,6 +120,8 @@ namespace DAL
             boss3.PasswordHash = hashed3;
             user2.PasswordHash = hashed4;
 
+
+
             builder.Entity<UserDAO>().HasData(boss1,boss2,boss3,user2);
 #endregion
         
@@ -200,38 +202,26 @@ namespace DAL
 
 
 
-            // var c1 = new CategorieDAO() { Nom = "Thriller" };
-            // var c2 = new CategorieDAO() { Nom = "Comédie" };
-            // var c3 = new CategorieDAO() { Nom = "Action" };
+            // DEBUT SEED EMPRUNT
 
 
+            // CREATION DES VAR avec les proprietaire {id.. = xx, ...}
+            var pret1 = new PretDAO()
+            {
+                Id_Pret = Guid.NewGuid(),
+                Nom_Objet = "tasse 2",
+                Description_Courte = "une jolie tasse",
+                Descrition_Longue = "une jolie tasse pour boire le thé",
+                Valeur = 50.1M,
+                Id_Proprietaire = client1.Id_Utilisateur
+            };
 
-            // var f1 = new FilmDAO()
-            // {
-            //     Title = "Les aventures fantastique du C# à Bordeaux",
-            //     Color = true,
-            //     Duration = 120,
-            //     ReleaseDate = new DateTime(2022, 12, 4),
-            //     IdCategorie = c1.Id
-            // };
-            // var f2 = new FilmDAO()
-            // {
-            //     Title = "Drive",
-            //     Color = true,
-            //     Duration = 120,
-            //     ReleaseDate = new DateTime(2022, 11, 4),
-            //     IdCategorie = c1.Id
-            // };
-            // var f3 = new FilmDAO()
-            // {
-            //     Title = "Lawrence d'Arabie",
-            //     Color = true,
-            //     Duration = 180,
-            //     ReleaseDate = new DateTime(2022, 11, 4),
-            //     IdCategorie = c2.Id
-            // };
 
-            // builder.Entity<FilmDAO>().HasData(new List<FilmDAO>() { f1, f2, f3 });
+            // HASDATA (builder.Entity<EmpruntunDAO...(var,var,var))
+
+            // FIN SEED EMPRUNT
+
+
         }
     }
 }

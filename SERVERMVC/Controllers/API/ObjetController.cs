@@ -17,14 +17,30 @@ public class ObjetController : ControllerBase
         this.mapper = mapper;
     }
 
-[HttpGet]
-    public IEnumerable<ObjetModel> Get(){
-           var daos=db.Objets.ToArray();
-           var models = mapper.Map<IEnumerable<ObjetModel>>(daos);
-         return models;
+// [HttpGet]
+//     public IEnumerable<ObjetModel> Get(){
+//            var daos=db.Objets.ToArray();
+//            var models = mapper.Map<IEnumerable<ObjetModel>>(daos);
+//          return models;
+//     }
 
-    
+
+[HttpGet("")]
+    public object Get(string searchText = "")
+    {
+        if(searchText==null){
+            searchText="";
+        }
+        // Recherche des résultats dans la BDD
+        var daos = db.Objets.Where(c => c.Nom_Objet.Contains(searchText));
+
+        // transformation des DAOs en DTOs
+        var dtos = mapper.Map<IEnumerable<ObjetModel>>(daos);
+        // Comme on est sur une api => renvoi des données directement
+        // automatiquement traduites en json
+        return dtos;
     }
+
 
 [HttpGet("{id:guid}")]
     public object GetObjet(Guid id){
@@ -33,6 +49,7 @@ public class ObjetController : ControllerBase
         return model;
 
     }
+
 
 
 }

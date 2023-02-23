@@ -13,7 +13,8 @@ import { CardObjetComponent } from './controls/card-objet/card-objet.component';
 import { ListCardsComponent } from './controls/list-cards/list-cards.component';
 import { DetailsObjetComponent } from './pages/details-objet/details-objet.component';
 import { NavbarComponent } from './controls/navbar/navbar.component';
-
+import { RechercheComponent } from './pages/recherche/recherche.component';
+ 
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +25,8 @@ import { NavbarComponent } from './controls/navbar/navbar.component';
     CardObjetComponent,
     ListCardsComponent,
     DetailsObjetComponent,
-    NavbarComponent
+    NavbarComponent,
+    RechercheComponent
   ],
   imports: [
     BrowserModule,
